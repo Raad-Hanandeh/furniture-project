@@ -2,16 +2,33 @@ let btnMenu = document.getElementById("menu")
 let btnClose = document.getElementById("close")
 let container = document.querySelector(".container")
 
+container.classList.add("hide")
+
+btnClose.onclick = function(){
+    container.classList.add("hide")
+
+}
+
+btnMenu.onclick = function(){
+    container.classList.remove("hide")
+
+}
+
+// ******************************************/
+
+
+
+
 const productsData = [
     {
         id: 1,
-        url: "./image/img-enjoy1.png",
+        url: "../image/Rectangle 543.png",
         name: "NATIVE IRON CHAIR",
         price: 4990
     },
     {
         id: 2,
-        url: "./image/Rectangleenjoy2.png",
+        url: "../image/Rectangle 544.png",
         name: "CENTURY DASHE",
         price: 4990
     },
@@ -23,7 +40,7 @@ const productsData = [
     },
     {
         id: 4,
-        url: "./image/Rectangle 545.png",
+        url: "../image/Rectangle 546.png",
         name: "PAOLA WOOD LAMP",
         price: 5990
     }
@@ -47,26 +64,179 @@ productsData.forEach(product => {
     `
 })
 
-container.classList.add("hide")
 
-btnClose.onclick = function(){
-    container.classList.add("hide")
+let engoy = document.querySelector(".img-engoy")
 
-}
+const imgGruop = [
+    {
+    id : 1,
+    url:('../image/img-enjoy1.png'),
+    name:"NATIVE IRON CHAIR",
+    price:4990,
+    },
+    {
+        id : 2,
+        url:('../image/Rectangleenjoy2.png'),
+        name:"CENTURY DASHE",
+        price:1799,
+    },
+    {
+        id : 3,
+        url:('../image/Rectangle enjoy3.png'),
+        name:"NATIVE LIGHT CHAIR",
+        price:4990,
+    },
+    {
+        id : 4,
+        url:('../image/Rectangle enjoy4.png'),
+        name:"PAOLA WOOD LAMP",
+        price:5990,
+    }
+]
 
-btnMenu.onclick = function(){
-    container.classList.remove("hide")
+imgGruop.forEach(item =>{
+    engoy.innerHTML +=`
+                   <div>
 
-}
+                   <div class="item-cart">
+                   <img alt="" id="itemOne" src="${item.url}">
+                   <button class="cart-btn" onclick="addToCart(${item.id})" >Add to cart</button>
+               </div>
+               <div class="text-enjoy">
+                   <p>${item.name}</p>
+                   <span>$${item.price}</span>
+               </div>
+                   </div>
+    `
+})
 
-// ******************************************
+ let engoy2 = document.querySelector(".img-engoy2")
 
-let imgOne = document.getElementById("imgOne")
-let imgTwo = document.getElementById("imgTwo")
-let imgThree = document.getElementById("imgThree")
-let imgFour = document.getElementById("imgFour")
+const imgGruop2 = [
+    {
+    id : 5,
+    url:('../image/Rectangle enjoy5.png'),
+    name:"NATIVE IRON CHAIR",
+    price:4990,
+    },
+    {
+        id : 6,
+        url:('../image/Rectangle enjoy6.png'),
+        name:"CENTURY DASHE",
+        price:1799,
+    },
+    {
+        id : 7,
+        url:('../image/Rectangle enjoy7.png'),
+        name:"NATIVE LIGHT CHAIR",
+        price:4990,
+    },
+    {
+        id : 8,
+        url:('../image/Rectangle enjoy8.png'),
+        name:"PAOLA WOOD LAMP",
+        price:5990,
+    }
+]
+
+
+
+imgGruop2.forEach((item => {
+    engoy2.innerHTML +=`<div>
+    <div class="item-cart">
+        <img alt="" id="itemFive" src="${item.url}">
+        <button class="cart-btn"  onclick="addToCart(${item.id})" >Add to cart</button>
+    </div>
+    
+    <div class="text-enjoy">
+        <p>${item.name}</p>
+        <span>$${item.price}</span>
+    </div>
+
+</div>
+
+
+
+    `
+
+}))
 
 let numBag = document.getElementById("numBag")
+
+let btnCart=document.querySelectorAll("cart-btn")
+
+function addToCart(productId) {
+    const data = productsData.filter(item => item.id === productId)[0];
+    localStorage.setItem("cart", JSON.stringify(data))
+
+    let value = Number(numBag.innerText) + 1
+    numBag.innerHTML=value
+        scrollTo({
+            left:0,
+            top:0,
+            behavior:"smooth"
+
+        })
+        itemShop.innerHTML += `
+       <div>
+       <p>${item.name}</p>
+       <span>$${item.price}</span>
+       </div>
+
+        
+        `
+}
+
+
+//************************************************* */
+let shoping = document.querySelector(".shoping")
+
+let btnClose2 = document.getElementById("close2")
+let bagShop = document.getElementById("bag-shop")
+let itemShop = document.querySelector(".item-shop")
+
+shoping.classList.add("hide")
+
+bagShop.onclick = ()=>{
+    shoping.classList.remove("hide")
+
+}
+btnClose2.onclick = ()=>{
+    shoping.classList.add("hide")
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // imgOne.addEventListener("click" , add)
@@ -151,20 +321,4 @@ let numBag = document.getElementById("numBag")
 //
 //
 //
-function add(){
-    let value = Number(numBag.innerText) + 1
-    numBag.innerHTML=value
-        scrollTo({
-            left:0,
-            top:0,
-            behavior:"smooth"
 
-        })
-}
-//
-
-
-function addToCart(productId) {
-    const data = productsData.filter(item => item.id === productId)[0];
-    localStorage.setItem("cart", JSON.stringify(data))
-}

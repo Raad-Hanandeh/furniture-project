@@ -80,6 +80,7 @@
   }
   .mar-bag {
     margin-right: 8px;
+    cursor: pointer;
   }
   .mid-svg {
     display: flex;
@@ -126,6 +127,27 @@
   .hide {
     display: none;
   }
+  /*************shoping**********************************************/
+  .shoping {
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    background-color: #222;
+    right: 0;
+    top: 0;
+    color: #fff;
+  }
+  .shoping button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .close2 {
+    display: flex;
+    justify-content: end;
+  }
+  /*************shoping**********************************************/
+
   /*******************************************************************/
   .main-item {
     /* margin-top: 175.5px; */
@@ -559,6 +581,9 @@
     margin: 24px 15px 40px;
   }
   .img-engoy2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 15px 40px;
     margin-bottom: 24px;
   }
   .text-enjoy {
@@ -798,15 +823,7 @@
     justify-content: space-between;
     margin: 24px 15px 70px;
   }
-  .card1 {
-    width: 454px;
-  }
-  .card2 {
-    width: 454px;
-  }
-  .card3 {
-    width: 454px;
-  }
+
   .text-card h5 {
     color: var(--Stormy, #323334);
 
@@ -819,6 +836,7 @@
     letter-spacing: -0.48px;
     align-self: stretch;
     margin-bottom: 24px;
+    width: 454px;
   }
   .text-card p {
     color: var(--Opal, #384353);
@@ -830,6 +848,7 @@
     font-weight: 400;
     line-height: 19px; /* 126.667% */
     margin-bottom: 24px;
+    width: 454px;
   }
   .text-card a {
     color: var(--Stormy, #323334);
@@ -843,6 +862,7 @@
     letter-spacing: 1.2px;
     text-decoration: none;
   }
+  /***************************************************/
   .discount {
     background-image: url(../image/Rectangle\ 552.png);
     width: 1325px;
