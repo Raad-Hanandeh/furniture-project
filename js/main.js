@@ -201,7 +201,7 @@ shoping.classList.add("hide")
 bagShop.onclick = ()=>{
     shoping.classList.remove("hide")
     const pullData = JSON.parse(localStorage?.getItem("cart")|| "[]")
-    const totalPrice = pullData.map(item => item.price).reduce((acc , n)=> acc + n , 0 )
+    const totalPrice = pullData.length > 0 ? pullData.map(item => item?.price).reduce((acc , n)=> acc + n , 0 ) : 0
     console.log("price" , totalPrice)
     if(pullData.length > 0){
         pullData.forEach((item)=>{
