@@ -176,14 +176,19 @@ function addToCart(productId) {
 
     let value = allData.length
     numBag.innerHTML=value
-        // scrollTo({
-        //     left:0,
-        //     top:0,
-        //     behavior:"smooth"
+        scrollTo({
+            left:0,
+            top:0,
+            behavior:"smooth"
 
-        // })
+        })
         console.log("old",oldData)
         console.log("new" , allData)
+
+      localStorage.getItem("cart" ,price)
+
+        let price = Number(total.innerText)+price
+        total.innerHTML +=price
         
 }
 
@@ -210,9 +215,14 @@ bagShop.onclick = ()=>{
                 <img alt="" src="${item.url}">
             </div>
             
-            <div >
+            <div>
                 <p>${item.name}</p>
-                <span>$${item.price}</span>
+                <div class="text-bag">
+                    <span>$${item.price}</span>
+                    <div class="btn-bag">
+                      <button id="delete" onclick="deleteitem()">delete</button>
+                    </div>
+                </div>
             </div>
         
         </div>
@@ -224,6 +234,11 @@ bagShop.onclick = ()=>{
 
         })
 
+    }else{
+        itemShop.innerHTML = "No Items in the bag"
+        totalPricee.classList.add("hide")
+      
+
     }
    
 
@@ -234,13 +249,16 @@ btnClose2.onclick = ()=>{
 }
 
 
-// function shoping(){
-    
 
+let btnDelete =document.getElementById("delete") 
+let totalPricee = document.querySelector(".total-price")
+let totalNum = document.getElementById("total")
 
-    
-// }
-
+function deleteitem(){
+    console.log("raad")
+    let allBag=document.querySelector(".item-bag")
+    allBag.remove()
+}
 
 
 
