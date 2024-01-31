@@ -2,6 +2,11 @@ let btnMenu = document.getElementById("menu")
 let btnClose = document.getElementById("close")
 let container = document.querySelector(".container")
 
+let btnDelete =document.getElementById("delete")
+let totalPricee = document.querySelector(".total-price")
+let totalNum = document.getElementById("total")
+
+
 container.classList.add("hide")
 
 btnClose.onclick = function(){
@@ -167,9 +172,9 @@ let btnCart=document.querySelectorAll("cart-btn")
 
 function addToCart(productId) {
     const fData = [...productsData,...imgGruop,...imgGruop2].find(item => item.id === productId);
-    const oldData = JSON.parse(localStorage?.getItem("cart")||"[]")
-    let allData = [...oldData , fData ]
-    localStorage.setItem("cart", JSON.stringify(allData))
+    const oldData = JSON.parse(localStorage?.getItem("cart")||"[]");
+    oldData.push(fData)
+    localStorage.setItem("cart", JSON.stringify(oldData))
 
     
 
@@ -185,11 +190,12 @@ function addToCart(productId) {
         console.log("old",oldData)
         console.log("new" , allData)
 
-      localStorage.getItem("cart" ,price)
-
-        let price = Number(total.innerText)+price
-        total.innerHTML +=price
-        
+      localStorage.getItem("cart" )
+    // [1,2,3,4]
+    let calcTotal =  allData.map(el => el.price).reduce((acc, curr) => acc + curr, 0);
+    console.log("calcTotal", calcTotal)
+    totalNum.innerHTML = allData.length > 0 ?  allData.map(el => el.price).reduce((acc, curr) => acc + curr, 0) : 0
+    renderCart()
 }
 
 
@@ -203,14 +209,14 @@ let itemShop = document.querySelector(".item-shop")
 
 shoping.classList.add("hide")
 
-bagShop.onclick = ()=>{
+function renderCart() {
     shoping.classList.remove("hide")
     const pullData = JSON.parse(localStorage?.getItem("cart")|| "[]")
     const totalPrice = pullData.length > 0 ? pullData.map(item => item?.price).reduce((acc , n)=> acc + n , 0 ) : 0
     console.log("price" , totalPrice)
     if(pullData.length > 0){
         pullData.forEach((item)=>{
-            itemShop.innerHTML+=`<div class="item-bag">
+            itemShop.innerHTML +=`<div id="${item.id}" class="item-bag">
             <div >
                 <img alt="" src="${item.url}">
             </div>
@@ -220,15 +226,12 @@ bagShop.onclick = ()=>{
                 <div class="text-bag">
                     <span>$${item.price}</span>
                     <div class="btn-bag">
-                      <button id="delete" onclick="deleteitem()">delete</button>
+                      <button id="delete" onclick="deleteItem(${item.id})">delete</button>
                     </div>
                 </div>
             </div>
-        
         </div>
-        
-        
-        
+       
             `
 
 
@@ -237,11 +240,14 @@ bagShop.onclick = ()=>{
     }else{
         itemShop.innerHTML = "No Items in the bag"
         totalPricee.classList.add("hide")
-      
+
 
     }
-   
 
+}
+
+bagShop.onclick = ()=>{
+    renderCart()
 }
 btnClose2.onclick = ()=>{
     shoping.classList.add("hide")
@@ -250,14 +256,20 @@ btnClose2.onclick = ()=>{
 
 
 
-let btnDelete =document.getElementById("delete") 
-let totalPricee = document.querySelector(".total-price")
-let totalNum = document.getElementById("total")
 
-function deleteitem(){
-    console.log("raad")
-    let allBag=document.querySelector(".item-bag")
-    allBag.remove()
+function deleteItem(id){
+
+    let target = document.getElementById(`${id}`);
+    let oldData = JSON.parse(localStorage?.getItem("cart") || "[]");
+    if(oldData.length > 0) {
+       let filteredData = oldData.filter(el => el.id !== id);
+       localStorage.setItem("cart", JSON.stringify(filteredData))
+       console.log("filteredData", filteredData);
+        totalNum.innerHTML = filteredData.length > 0 ?  filteredData.map(el => el.price).reduce((acc, curr) => acc + curr, 0) : 0
+
+    }
+    target.remove();
+
 }
 
 
