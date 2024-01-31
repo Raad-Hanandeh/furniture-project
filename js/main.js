@@ -185,10 +185,10 @@ function addToCart(productId) {
         console.log("old",oldData)
         console.log("new" , allData)
 
-      localStorage.getItem("cart" ,price)
+    //   localStorage.getItem("cart" ,price)
 
-        let price = Number(total.innerText)+price
-        total.innerHTML +=price
+    //     let price = Number(total.innerText)+price
+    //     total.innerHTML +=price
         
 }
 
