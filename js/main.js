@@ -179,7 +179,7 @@ function addToCart(productId) {
     
 
 
-    let value = allData.length
+    let value = oldData.length
     numBag.innerHTML=value
         scrollTo({
             left:0,
@@ -188,13 +188,13 @@ function addToCart(productId) {
 
         })
         console.log("old",oldData)
-        console.log("new" , allData)
+        console.log("new" , oldData)
 
       localStorage.getItem("cart" )
     // [1,2,3,4]
-    let calcTotal =  allData.map(el => el.price).reduce((acc, curr) => acc + curr, 0);
+    let calcTotal =  oldData.map(el => el.price).reduce((acc, curr) => acc + curr, 0);
     console.log("calcTotal", calcTotal)
-    totalNum.innerHTML = allData.length > 0 ?  allData.map(el => el.price).reduce((acc, curr) => acc + curr, 0) : 0
+    totalNum.innerHTML = oldData.length > 0 ?  oldData.map(el => el.price).reduce((acc, curr) => acc + curr, 0) : 0
     renderCart()
 }
 
