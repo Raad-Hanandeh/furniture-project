@@ -61,6 +61,8 @@
 }
 .item-cart {
   position: relative;
+
+  /* display: flex; */
 }
 
 .item-cart:hover .cart-btn {
@@ -70,7 +72,7 @@
 .cart-btn {
   display: none;
   min-height: 41px;
-  width: 100%;
+  width: 171px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -85,8 +87,1131 @@
   background-color: #384353;
   transition: all 0.3s linear;
 }
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 376px) {
+  .cart-btn {
+    display: none;
+    min-height: 41px;
+    width: 171px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 0;
+    font-weight: 700;
+    background-color: #eee;
+    text-transform: uppercase;
+  }
+  .main-background {
+    width: auto;
+    height: 100vh;
+    background-image: url(../image/main-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .main-navbar {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 12px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .number {
+    width: 25px;
+    height: 25px;
+    background-color: #384353;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .shop {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .mar-shop {
+    margin-left: 16px;
+  }
+  .num {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .mar-bag {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  .mid-svg {
+    display: flex;
+    align-items: center;
+  }
+  #menu {
+    cursor: pointer;
+  }
+  /**********************menu**********************/
+
+  .container {
+    width: 200px;
+    height: 100vh;
+    background-color: #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .container ul {
+    /* display: none; */
+    list-style: none;
+    text-transform: capitalize;
+  }
+  .container ul li {
+    margin: 5px;
+    color: #fff;
+    padding: 15px;
+    font-size: large;
+  }
+  .container ul li:hover {
+    background-color: black;
+  }
+  .close {
+    display: flex;
+    justify-content: end;
+  }
+  .close button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .close button:hover {
+    background-color: black;
+  }
+  .hide {
+    display: none;
+  }
+
+  /*************shoping**********************************************/
+  .shoping {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    right: 0;
+    top: 0;
+    color: #fff;
+  }
+  .shoping button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .close2 {
+    display: flex;
+    justify-content: end;
+  }
+  /*************shoping**********************************************/
+
+  /*******************************************************************/
+  .main-item {
+    /* margin-top: 175.5px; */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    /* align-content: center; */
+    height: 86%;
+  }
+  .main-item h1 {
+    color: var(--White, #fcfdfd);
+    text-align: center;
+    font-family: "Reckless Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: -0.72px;
+  }
+  .main-item span {
+    color: var(--White, #fcfdfd);
+    text-align: center;
+    font-family: "Reckless Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: -0.72px;
+  }
+  .main-btn {
+    text-align: center;
+    margin-top: 48px;
+  }
+  .main-btn button {
+    text-align: center;
+    padding: 8px 36px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--Linen, #f8f4e7);
+    border: none;
+    color: var(--Stormy, #323334);
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+  }
+  .main-btn button:hover {
+    background: rgb(154, 152, 152);
+    color: #fff;
+  }
+
+  /***************************************sec--2*******************************************/
+  /* .main-img {
+    position: relative;
+    margin-top: 30px;
+  } */
+  .text-img2 {
+    /* position: absolute;
+    top: 293px;
+    left: 445px;
+    transform: translate(-50%, -50%); */
+
+    margin-top: 188px;
+  }
+
+  .text-img2 h2 {
+    color: var(--Stormy, #323334);
+    text-align: center;
+
+    /* Heading/H4 */
+    font-family: "Reckless Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px; /* 116.667% */
+    letter-spacing: -0.72px;
+    margin-bottom: 36px;
+  }
+  .text-img2 span {
+    color: var(--Stormy, #323334);
+    text-align: center;
+
+    /* Heading/H4 */
+    font-family: "Reckless Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px; /* 116.667% */
+    letter-spacing: -0.72px;
+  }
+  .text-img2 p {
+    color: var(--Stormy, #323334);
+    text-align: center;
+
+    /* Paragraph/Regular */
+    font-family: "Neue Montreal";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px; /* 126.667% */
+    align-self: stretch;
+    /* padding: 0 10px; */
+    margin-bottom: 24px;
+  }
+  .btn-text {
+    text-align: center;
+  }
+  .btn-text button {
+    text-align: center;
+    padding: 8px 36px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--Oyster, #dfdedb);
+    cursor: pointer;
+    color: var(--Stormy, #323334);
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+  }
+  /* .img1 {
+    position: absolute;
+    top: 181px;
+    left: 38px;
+  }
+  .img2 {
+    position: absolute;
+    left: 537px;
+  }
+  .img3 {
+    position: absolute;
+    right: 200px;
+    top: 232px;
+  }
+  .img4 {
+    position: absolute;
+    left: 0;
+    top: 473px;
+  }
+  .img5 {
+    position: absolute;
+    top: 421px;
+    right: 0;
+  }
+  .img6 {
+    position: absolute;
+    top: 660px;
+    right: 198px;
+  } */
+  .clear {
+    height: 78vh;
+  }
+  .img-display {
+    display: none;
+  }
+  /******************************************************************/
+
+  .product p {
+    color: var(--Stormy, #323334);
+    text-align: center;
+    font-family: "Reckless Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: -0.72px;
+    margin: 24px 0;
+  }
+  .product hr {
+    background: #dfdedb;
+    height: 1px;
+  }
+  .img-product {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 8px 0 24px;
+  }
+  .img-product img {
+    cursor: pointer;
+    width: 171.5px;
+    height: 331px;
+  }
+  /****************/
+  .test-flex:first-child {
+    border-right: 1px solid #dfdedb;
+    border-bottom: 1px solid #dfdedb;
+    padding: 4px;
+  }
+  .test-flex:nth-child(2) {
+    border-bottom: 1px solid #dfdedb;
+    padding: 4px;
+  }
+  .test-flex:nth-child(3) {
+    border-right: 1px solid #dfdedb;
+    border-bottom: 1px solid #dfdedb;
+    padding: 4px;
+  }
+  .test-flex:last-child {
+    border-bottom: 1px solid #dfdedb;
+    padding: 4px;
+  }
+
+  /****************/
+  .text-pro {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  .text-pro p {
+    color: var(--Stormy, #323334);
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+  }
+  .text-pro span {
+    color: var(--Opal, #384353);
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+  }
+  .product-hr2 {
+    display: flex;
+    justify-content: center;
+  }
+  .product-hr2 a {
+    color: var(--Stormy, #323334);
+    text-align: center;
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+    margin: 24px 0;
+    text-decoration: none;
+  }
+  .test-flex img {
+    width: 171px;
+    height: 154px;
+  }
+  /******************************************************************/
+  .main-native {
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+    justify-content: center;
+    background: var(--Opal, #384353);
+  }
+  .native-3 {
+    background-image: url(../image/nativ3.png);
+    display: flex;
+    width: 343px;
+    height: 319px;
+    margin: 16px 16px 56px;
+  }
+
+  .text-Native {
+    margin: 0 16px 60px;
+  }
+
+  .text-Native h3 {
+    color: var(--White, #fcfdfd);
+    font-family: "Reckless Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: -0.72px;
+    align-self: stretch;
+  }
+  .text-Native p {
+    color: var(--Oyster, #dfdedb);
+    font-family: "Neue Montreal";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    width: 343px;
+    margin-bottom: 24px;
+  }
+  .text-Native a {
+    color: var(--White, #fcfdfd);
+    text-decoration: none;
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+  }
+
+  .Native .text-Native {
+    padding: 0;
+  }
+  /******************************************************************/
+  .vase {
+    background-image: url(../image/Rectangle\ vase.png);
+    width: auto;
+    height: 664px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  .vase1 {
+    width: 291px;
+    height: 365px;
+    background-color: #fff;
+    margin-left: 106px;
+    transform: translatey(125px);
+    display: none;
+  }
+  .vase2 {
+    width: 291px;
+    height: 365px;
+    background-color: #fff;
+    transform: translate(1073px, 178px);
+    display: none;
+  }
+  /*********************************************************************/
+  .bg-lookbook {
+    width: auto;
+    height: 2094;
+    flex-shrink: 0;
+    background: var(--Opal, #384353);
+  }
+  .text-look {
+    width: 376px;
+    height: auto;
+  }
+  .text-looktwo {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .text-looktwo img {
+    width: 343px;
+    height: auto;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .rotate-line {
+    width: 1px;
+    height: 769px;
+    background: #dfdedb;
+    display: none;
+  }
+  .sec1-look {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+  }
+  .text-look h3 {
+    color: var(--Claudy, #f5f4f3);
+    text-align: center;
+    font-family: "Reckless Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: -0.72px;
+    margin: 16px 0 56px;
+  }
+  .text-look p {
+    color: var(--Oyster, #dfdedb);
+    text-align: center;
+    font-family: "Neue Montreal";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+
+    width: 343px;
+    margin-bottom: 56px;
+  }
+  .rotate {
+    width: 62px;
+    height: 769px;
+    display: none;
+  }
+  .rotate-p {
+    display: flex;
+    flex-flow: column-reverse;
+    height: 769px;
+  }
+
+  .rotate p {
+    color: var(--Claudy, #f5f4f3);
+    text-align: center;
+    font-family: "Reckless Neue";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 101px;
+    letter-spacing: -0.48px;
+    transform: rotate(-90deg);
+  }
+  .one {
+    margin-top: 22px;
+    display: none;
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px 8px 9px 21px;
+    display: none;
+  }
+  .item span {
+    color: var(--Claudy, #f5f4f3);
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+  }
+  .text-looktwo img {
+    margin: 8px;
+  }
+
+  .materials {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 19px 10px 16px;
+  }
+  .materials span {
+    color: var(--Claudy, #f5f4f3);
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+  }
+  .hr-respon {
+    display: none;
+  }
+  /************************************************************/
+  .enjoy p {
+    color: var(--Claudy, #f5f4f3);
+    text-align: center;
+    font-family: "Reckless Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: -0.72px;
+    margin: 24px 0;
+  }
+  .img-engoy {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .img-engoy img {
+    width: 171px;
+    height: 154px;
+  }
+  .img-engoy2 {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  .text-enjoy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  .text-enjoy p {
+    color: var(--Claudy, #f5f4f3);
+
+    /* Paragraph/Small */
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 1.2px;
+    margin-bottom: 24px;
+  }
+  .text-enjoy span {
+    color: var(--Oyster, #dfdedb);
+
+    /* Paragraph/Small */
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 1.2px;
+    margin-bottom: 16px;
+  }
+  .enjoy {
+    text-align: center;
+    margin: 24px 0;
+  }
+  .enjoy a {
+    text-decoration: none;
+    color: var(--White, #fcfdfd);
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+  }
+  .img-engoy img {
+    cursor: pointer;
+  }
+  /*************************************matter***********************************/
+  .line2 {
+    width: 2px;
+    height: 512px;
+    margin-left: 60px;
+    background: #dfdedb;
+    display: none;
+  }
+  .matter {
+    display: flex;
+  }
+  .every {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-top: 70px;
+  }
+  .every::after {
+    border: 6px solid #dfdedb;
+  }
+  .every h3 {
+    color: var(--Stormy, #323334);
+    text-align: center;
+
+    /* Heading/H4 */
+    font-family: "Reckless Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px; /* 116.667% */
+    letter-spacing: -0.72px;
+    margin-bottom: 36px;
+  }
+  .every span {
+    color: var(--Stormy, #323334);
+    text-align: center;
+
+    /* Paragraph/Small */
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 1.2px;
+    margin-bottom: 36px;
+  }
+  .every p {
+    color: var(--Stormy, #323334);
+    text-align: center;
+
+    /* Paragraph/Regular */
+    font-family: "Neue Montreal";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px; /* 126.667% */
+    margin-bottom: 56px;
+  }
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .detailsItem span {
+    color: var(--Stormy, #323334);
+    text-align: center;
+    font-family: "Reckless Neue";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 153px;
+    letter-spacing: -0.48px;
+    transform: rotate(-90deg);
+  }
+  .detailsItem {
+    width: 60px;
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    height: 707px;
+    display: none;
+  }
+  .lineeItem {
+    width: 2px;
+    height: auto;
+    background: #dfdedb;
+    display: none;
+  }
+  .details-img1 img {
+    margin: 0;
+    width: 100%;
+    height: 261px;
+    flex-shrink: 0;
+  }
+  .details-img2 img {
+    margin: 4px 8px 8px 0;
+    width: 175.5px;
+    height: 204px;
+    flex-shrink: 0;
+  }
+  .details-img2 {
+    display: flex;
+  }
+  .det-img3 {
+    width: auto;
+    height: 665px;
+    flex-shrink: 0;
+    background-image: url(../image/Screenshot\ 2022-09-06\ at\ 20.04\ 3.png);
+    background-size: cover;
+    background-position: center;
+  }
+  /*******************************************************/
+  .articles p {
+    color: var(--Stormy, #323334);
+    text-align: center;
+    font-family: "Reckless Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: -0.72px;
+    margin: 24px 0;
+  }
+  hr {
+    background: #dfdedb;
+  }
+  .Chicago {
+    display: flex;
+    display: none;
+  }
+  .reader {
+    width: 60px;
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    height: 620px;
+    display: none;
+  }
+  .reader span {
+    color: var(--Stormy, #323334);
+    text-align: center;
+    font-family: "Reckless Neue";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 85px;
+    letter-spacing: -0.48px;
+    transform: rotate(-90deg);
+  }
+  .linechicago {
+    width: 2px;
+    height: 660;
+    background: #dfdedb;
+  }
+  .text-chicago {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    /* text-align: center; */
+    margin: 0 33px;
+  }
+  .text-chicago h3 {
+    color: var(--Stormy, #323334);
+    font-family: "Reckless Neue";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: -2.24px;
+    align-self: stretch;
+    margin-bottom: 56px;
+  }
+  .text-chicago p {
+    color: var(--Opal, #384353);
+
+    /* Paragraph/Regular */
+    font-family: "Neue Montreal";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px; /* 126.667% */
+    align-self: stretch;
+    margin-bottom: 56px;
+  }
+  .text-chicago a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--Stormy, #323334);
+
+    /* Paragraph/Small */
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 1.2px;
+  }
+  .img-chicago img {
+    margin: 33px 11px 26px 0;
+  }
+  .hide {
+    display: none;
+  }
+  /********************************************/
+  .modern a {
+    text-decoration: none;
+    color: var(--Stormy, #323334);
+    justify-content: center;
+    display: flex;
+    padding: 0px 36px;
+    align-items: center;
+    gap: 8px;
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+    margin: 24px 0;
+    display: none;
+  }
+  .modern2 {
+    width: 100%;
+  }
+  .modern2 a {
+    text-decoration: none;
+    color: var(--Stormy, #323334);
+    justify-content: center;
+    display: flex;
+    padding: 0px 36px;
+    align-items: center;
+    gap: 8px;
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+    padding: 24px 0;
+    margin: 25px 0 0px 0;
+    border-top: 1px solid #dfdedb;
+    border-bottom: 1px solid #dfdedb;
+  }
+  .card {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .itemcard {
+    padding: 0 16px;
+  }
+  .cardimg {
+    background-image: url(../image/Rectangle\ 554.png);
+    width: auto;
+    height: 289px;
+    flex-grow: 0;
+
+    background-size: cover;
+  }
+  .cardimg1 {
+    background-image: url(../image/Rectangle\ 5545.png);
+    width: auto;
+    height: 289px;
+    flex-grow: 0;
+
+    background-size: cover;
+  }
+  .cardimg2 {
+    background-image: url(../image/Rectangle\ 5544.png);
+    width: auto;
+    height: 289px;
+    flex-grow: 0;
+
+    background-size: cover;
+  }
+
+  .text-card h5 {
+    height: 56px;
+    align-self: stretch;
+    flex-grow: 0;
+    font-family: "RecklessNeue";
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: -0.48px;
+    text-align: left;
+    color: var(--stormy);
+    margin: 16px 0 24px 0;
+  }
+
+  .text-card p {
+    height: 133px;
+    align-self: stretch;
+    flex-grow: 0;
+    font-family: "NeueMontreal";
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--opal);
+    margin: 0 0 24px 0;
+  }
+  .text-card a {
+    width: 95px;
+    height: 14px;
+    flex-grow: 0;
+    font-family: "NeueMontreal";
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: var(--stormy);
+    text-decoration: none;
+  }
+  .itemcard-mr {
+    margin: 24px 0;
+  }
+  /*************************************************/
+  .discount {
+    background-image: url(../image/Rectangle\ 552.png);
+    width: auto;
+    height: 677px;
+    flex-shrink: 0;
+    margin: 70px 0 0 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+  }
+  .discount p {
+    height: 84px;
+    align-self: stretch;
+    flex-grow: 0;
+    font-family: "RecklessNeue";
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: -0.72px;
+    text-align: center;
+    color: white;
+    margin-bottom: 48px;
+  }
+  .discount input {
+    background: transparent;
+
+    width: 344px;
+    padding: 16px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--Oyster, #dfdedb);
+    color: #fff;
+  }
+  ::placeholder {
+    color: var(--Claudy, #f5f4f3);
+
+    /* Paragraph/Small */
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 1.2px;
+  }
+  /*************************************************/
+  .table-foter {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+    background: var(--Opal, #384353);
+  }
+  .table-foter svg {
+    width: 309px;
+    margin: 0 17px;
+  }
+
+  .linefooter {
+    width: 1px;
+    height: 177px;
+    background: #dfdedb;
+    display: none;
+  }
+  .list {
+    /* padding: 0; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 57px;
+  }
+
+  .list ul li a {
+    text-decoration: none;
+    color: var(--Claudy, #f5f4f3);
+
+    /* Paragraph/Small */
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 1.2px;
+  }
+  .list ul li {
+    list-style: none;
+    margin: 10px 16px;
+  }
+  .list ul {
+    /* margin: 0 16px; */
+    width: 179px;
+    border: 1px solid #dfdedb;
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+  }
+  .copyright span {
+    color: var(--Claudy, #f5f4f3);
+
+    margin: 24px 0;
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 1.2px;
+  }
+}
+/* // XX-Large devices (larger desktops, 1400px and up) */
+/* // XX-Large devices (larger desktops, 1400px and up) */
+/* // XX-Large devices (larger desktops, 1400px and up) */
+/* // XX-Large devices (larger desktops, 1400px and up) */
+/* // XX-Large devices (larger desktops, 1400px and up) */
+/* // XX-Large devices (larger desktops, 1400px and up) */
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1440px) {
+  .cart-btn {
+    display: none;
+    min-height: 41px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 0;
+    font-weight: 700;
+    background-color: #eee;
+    text-transform: uppercase;
+  }
   .main-background {
     width: 100%;
     height: 100vh;
@@ -202,11 +1327,9 @@
 
   /*******************************************************************/
   .main-item {
-    /* margin-top: 175.5px; */
     display: flex;
     flex-flow: column;
     justify-content: center;
-    /* align-content: center; */
     height: 91%;
   }
   .main-item h1 {
@@ -262,26 +1385,22 @@
     position: absolute;
     top: 293px;
     left: 445px;
-    /* transform: translate(-50%, -50%); */
+    margin-top: 0px;
   }
 
   .text-img2 h2 {
     color: var(--Stormy, #323334);
     text-align: center;
-
-    /* Heading/H2 Regular */
     font-family: "Reckless Neue";
     font-size: 72px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%; /* 72px */
+    line-height: 100%;
     letter-spacing: -3.6px;
     margin-bottom: 36px;
   }
   .text-img2 span {
     color: var(--Stormy, #323334);
-
-    /* Heading/H2 Italic */
     font-family: "Reckless Neue";
     font-size: 72px;
     font-style: italic;
@@ -298,6 +1417,7 @@
     font-weight: 400;
     line-height: 19px;
     margin-bottom: 24px;
+    width: 506px;
   }
   .btn-text {
     text-align: center;
@@ -350,6 +1470,9 @@
   .clear {
     height: 150vh;
   }
+  .img-display {
+    display: flex;
+  }
   /******************************************************************/
   .product p {
     color: var(--Stormy, #323334);
@@ -367,12 +1490,14 @@
     height: 1px;
   }
   .img-product {
-    margin: 24px 15px 24px;
+    margin: 24px 15px 48px;
     display: flex;
     justify-content: space-between;
   }
   .img-product img {
     cursor: pointer;
+    width: 330px;
+    height: 331px;
   }
   /****************/
   .img-hover:hover {
@@ -383,27 +1508,25 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    flex-direction: row;
   }
+
   .text-pro p {
     color: var(--Stormy, #323334);
-
-    /* Paragraph/Small */
     font-family: "Neue Montreal";
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px;
     letter-spacing: 1.2px;
   }
   .text-pro span {
     color: var(--Opal, #384353);
-
-    /* Paragraph/Small */
     font-family: "Neue Montreal";
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px;
     letter-spacing: 1.2px;
   }
   .product-hr2 {
@@ -422,13 +1545,15 @@
     margin: 24px 0;
     text-decoration: none;
   }
-  /* .product-hr2 hr {
-    background: #dfdedb;
-    height: 1px;
+  .test-flex {
+    margin: 0px;
+    /* display: flex; */
   }
-  .product-hr2 {
-    margin-bottom: 22px;
-  } */
+  .test-flex {
+    width: 330px;
+    height: 331px;
+    align-self: stretch;
+  }
   /****************************************************************/
   .main-native {
     display: flex;
@@ -440,34 +1565,37 @@
     height: 670px;
     flex-shrink: 0;
   }
+
+  .text-Native {
+    margin: 0px;
+  }
+  .native-3 {
+    background-image: url(../image/nativ3.png);
+    display: none;
+  }
   .text-Native h3 {
     color: var(--White, #fcfdfd);
-
-    /* Heading/H4 */
     font-family: "Reckless Neue";
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
-    line-height: 42px; /* 116.667% */
+    line-height: 42px;
     letter-spacing: -0.72px;
     margin-bottom: 48px;
   }
   .text-Native p {
     color: var(--Oyster, #dfdedb);
-
-    /* Paragraph/Regular */
     font-family: "Neue Montreal";
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 19px; /* 126.667% */
     margin-bottom: 24px;
+    width: 405px;
   }
   .text-Native a {
     color: var(--White, #fcfdfd);
     text-decoration: none;
-
-    /* Paragraph/Small */
     font-family: "Neue Montreal";
     font-size: 12px;
     font-style: normal;
@@ -497,20 +1625,19 @@
     background-color: #fff;
     margin-left: 106px;
     transform: translatey(125px);
+    display: flex;
   }
   .vase2 {
     width: 291px;
     height: 365px;
     background-color: #fff;
-    /* float: left; */
-    /* right: 0px;
-    bottom: 0px; */
     transform: translate(1073px, 178px);
+    display: flex;
   }
   /*********************************************************************/
   .bg-lookbook {
     /* display: flex; */
-    width: 1441px;
+    width: 1440px;
     height: 1773px;
     flex-shrink: 0;
     background: var(--Opal, #384353);
@@ -519,7 +1646,25 @@
     width: 756px;
     height: 769px;
   }
-
+  .text-looktwo {
+    display: flex;
+    flex-direction: column;
+  }
+  .text-looktwo img {
+    display: flex;
+    width: 582px;
+    height: 561px;
+    padding: 20px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .rotate-line {
+    width: 1px;
+    height: 769px;
+    background: #dfdedb;
+    display: flex;
+  }
   .sec1-look {
     display: flex;
     height: 769px;
@@ -545,27 +1690,25 @@
     color: var(--Oyster, #dfdedb);
     text-align: center;
 
-    font-family: "Neue Montreal";
+    font-family: Neue Montreal;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 19px;
-    padding: 0 171px;
+    width: 414px;
+    margin: 0 169px;
   }
   .rotate {
     width: 62px;
     height: 769px;
+    display: block;
   }
   .rotate-p {
     display: flex;
     flex-flow: column-reverse;
     height: 769px;
   }
-  .rotate-line {
-    width: 2px;
-    height: 769px;
-    background: #dfdedb;
-  }
+
   .rotate p {
     color: var(--Claudy, #f5f4f3);
     text-align: center;
@@ -616,6 +1759,10 @@
     line-height: 14px;
     letter-spacing: 1.2px;
   }
+  .hr-respon {
+    display: flex;
+  }
+  /************************************************************/
   .enjoy p {
     color: var(--Claudy, #f5f4f3);
     text-align: center;
@@ -631,6 +1778,11 @@
     display: flex;
     justify-content: space-between;
     margin: 24px 15px 40px;
+    flex-direction: row;
+  }
+  .img-engoy img {
+    width: 330px;
+    height: 331px;
   }
   .img-engoy2 {
     display: flex;
@@ -642,27 +1794,24 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    flex-direction: row;
   }
   .text-enjoy p {
     color: var(--Claudy, #f5f4f3);
-
-    /* Paragraph/Small */
     font-family: "Neue Montreal";
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px;
     letter-spacing: 1.2px;
   }
   .text-enjoy span {
     color: var(--Oyster, #dfdedb);
-
-    /* Paragraph/Small */
     font-family: "Neue Montreal";
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px;
     letter-spacing: 1.2px;
   }
   .enjoy {
@@ -688,6 +1837,7 @@
     height: 512px;
     margin-left: 60px;
     background: #dfdedb;
+    display: flex;
   }
   .matter {
     display: flex;
@@ -697,6 +1847,9 @@
     flex-flow: column;
     justify-content: center;
     margin-top: 70px;
+  }
+  .every::after {
+    border: 6px solid #dfdedb;
   }
   .every h3 {
     color: var(--Stormy, #323334);
@@ -732,6 +1885,7 @@
   }
   .details {
     display: flex;
+    flex-wrap: nowrap;
   }
   .detailsItem span {
     color: var(--Stormy, #323334);
@@ -750,17 +1904,33 @@
     flex-flow: column;
     justify-content: end;
     height: 707px;
+    display: flex;
   }
   .lineeItem {
     width: 2px;
     height: auto;
     background: #dfdedb;
+    display: flex;
   }
   .details-img1 img {
     margin: 12px 11px 18px 16px;
+    width: 972px;
+    height: 677px;
+    flex-shrink: 0;
   }
   .details-img2 img {
     margin: 13px 14px 16px 16px;
+    width: 349px;
+    height: 260px;
+    flex-shrink: 0;
+  }
+  .details-img2 :last-child {
+    width: 349px;
+    height: 385px;
+    flex-shrink: 0;
+  }
+  .details-img2 {
+    display: block;
   }
   /*******************************************************/
   .articles p {
@@ -786,6 +1956,7 @@
     flex-flow: column;
     justify-content: end;
     height: 620px;
+    display: flex;
   }
   .reader span {
     color: var(--Stormy, #323334);
@@ -807,7 +1978,6 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-    /* text-align: center; */
     margin: 0 33px;
   }
   .text-chicago h3 {
@@ -823,13 +1993,11 @@
   }
   .text-chicago p {
     color: var(--Opal, #384353);
-
-    /* Paragraph/Regular */
     font-family: "Neue Montreal";
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 19px; /* 126.667% */
+    line-height: 19px;
     align-self: stretch;
     margin-bottom: 56px;
   }
@@ -839,17 +2007,18 @@
     align-items: center;
     gap: 8px;
     color: var(--Stormy, #323334);
-
-    /* Paragraph/Small */
     font-family: "Neue Montreal";
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px;
     letter-spacing: 1.2px;
   }
   .img-chicago img {
     margin: 33px 11px 26px 0;
+  }
+  .modern2 {
+    display: none;
   }
   /***************************************************/
   .modern a {
@@ -860,13 +2029,11 @@
     padding: 0px 36px;
     align-items: center;
     gap: 8px;
-
-    /* Paragraph/Small */
     font-family: "Neue Montreal";
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px;
     letter-spacing: 1.2px;
     margin: 24px 0;
   }
@@ -875,16 +2042,41 @@
     justify-content: space-between;
     margin: 24px 15px 70px;
   }
+  .itemcard {
+    padding: 0;
+  }
+  .cardimg {
+    background-image: url(../image/Rectangle\ 554.png);
+    width: 454px;
+    height: 383px;
+    flex-grow: 0;
+
+    background-size: cover;
+  }
+  .cardimg1 {
+    background-image: url(../image/Rectangle\ 5545.png);
+    width: 454px;
+    height: 383px;
+    flex-grow: 0;
+
+    background-size: cover;
+  }
+  .cardimg2 {
+    background-image: url(../image/Rectangle\ 5544.png);
+    width: 454px;
+    height: 383px;
+    flex-grow: 0;
+
+    background-size: cover;
+  }
 
   .text-card h5 {
     color: var(--Stormy, #323334);
-
-    /* Heading/H5 */
     font-family: "Reckless Neue";
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px; /* 116.667% */
+    line-height: 28px;
     letter-spacing: -0.48px;
     align-self: stretch;
     margin-bottom: 24px;
@@ -892,27 +2084,29 @@
   }
   .text-card p {
     color: var(--Opal, #384353);
-
-    /* Paragraph/Regular */
     font-family: "Neue Montreal";
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 19px; /* 126.667% */
+    line-height: 19px;
     margin-bottom: 24px;
     width: 454px;
   }
   .text-card a {
     color: var(--Stormy, #323334);
-
-    /* Paragraph/Small */
-    font-family: "Neue Montreal";
+    font-family: Neue Montreal;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px;
     letter-spacing: 1.2px;
     text-decoration: none;
+  }
+  .itemcard-mr {
+    margin: 0;
+  }
+  .hide {
+    display: flex;
   }
   /***************************************************/
   .discount {
@@ -929,15 +2123,13 @@
   .discount p {
     color: var(--Claudy, #f5f4f3);
     text-align: center;
-
-    /* Heading/H2 Regular */
-    font-family: "Reckless Neue";
+    font-family: Reckless Neue;
     font-size: 72px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%; /* 72px */
+    line-height: 100%;
     letter-spacing: -3.6px;
-    margin-bottom: 48px;
+    margin-bottom: 96px;
   }
   .discount input {
     background: transparent;
@@ -952,13 +2144,11 @@
   }
   ::placeholder {
     color: var(--Claudy, #f5f4f3);
-
-    /* Paragraph/Small */
     font-family: "Neue Montreal";
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px;
     letter-spacing: 1.2px;
   }
   /*************************************************/
@@ -968,10 +2158,14 @@
     flex-shrink: 0;
     background: var(--Opal, #384353);
   }
+  .table-foter svg {
+    width: auto;
+  }
   .linefooter {
     width: 1px;
     height: 177px;
     background: #dfdedb;
+    display: flex;
   }
   .list {
     padding: 0 70px;
@@ -981,13 +2175,11 @@
   .list ul li a {
     text-decoration: none;
     color: var(--Claudy, #f5f4f3);
-
-    /* Paragraph/Small */
     font-family: "Neue Montreal";
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px;
     letter-spacing: 1.2px;
   }
   .list ul li {
@@ -997,6 +2189,7 @@
   .list ul {
     margin-top: 21px;
     margin-right: 110px;
+    border: none;
   }
   .table-foter svg {
     margin: 99px 25px 87px 56px;
@@ -1013,7 +2206,7 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px;
     letter-spacing: 1.2px;
   }
 }

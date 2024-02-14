@@ -55,7 +55,7 @@ const imageMaster = document.querySelector(".img-product");
 
 productsData.forEach(item => {
     imageMaster.innerHTML += `
-                    <div>
+                    <div class="test-flex">
                      <div class="item-cart">
                          <img alt="" class="img-hover" id="imgOne" src="${item.url}">
                         <button class="cart-btn" onclick="addToCart(${item.id})">Add to cart</button>
@@ -101,7 +101,7 @@ const imgGruop = [
 
 imgGruop.forEach(item =>{
     engoy.innerHTML +=`
-                   <div>
+                   <div >
 
                    <div class="item-cart">
                    <img alt="" id="itemOne" src="${item.url}">
