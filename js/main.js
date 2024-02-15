@@ -101,7 +101,7 @@ const imgGruop = [
 
 imgGruop.forEach(item =>{
     engoy.innerHTML +=`
-                   <div >
+                   <div class="card-line" >
 
                    <div class="item-cart">
                    <img alt="" id="itemOne" src="${item.url}">
@@ -147,7 +147,7 @@ const imgGruop2 = [
 
 
 imgGruop2.forEach((item => {
-    engoy2.innerHTML +=`<div>
+    engoy2.innerHTML +=`<div class="card-line">
     <div class="item-cart">
         <img alt="" id="itemFive" src="${item.url}">
         <button class="cart-btn"  onclick="addToCart(${item.id})" >Add to cart</button>
